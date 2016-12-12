@@ -5,6 +5,10 @@ try:
 except ImportError:
     from distutils.core import setup
 
+requires = [
+    'requests',
+]
+
 setup(
     name='serwersms',
     version='1.0',
@@ -17,6 +21,7 @@ setup(
         'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries',
-        'Programming Language :: Python :: 3.4'
-    ]
+        'Programming Language :: Python :: 2.7'
+    ],
+    install_requires=requires,
 )

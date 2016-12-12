@@ -1,9 +1,7 @@
 class Payment:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * List of payments
     *
@@ -17,8 +15,8 @@ class Payment:
     *          option string "payment_to"
     *          option string "url"
     '''
-    def index(self):
 
+    def index(self):
         return self.master.call('payments/index', {})
 
     '''
@@ -34,14 +32,13 @@ class Payment:
     *      option string "payment_to"
     *      option string "url"
     '''
-    def view(self, id):
 
+    def view(self, id):
         options = {
             'id': id
         }
 
         return self.master.call('payments/view', options)
-
 
     '''
     * Download invoice as PDF
@@ -49,8 +46,8 @@ class Payment:
     * param int id
     * return resource
     '''
-    def invoice(self, id):
 
+    def invoice(self, id):
         options = {
             'id': id
         }

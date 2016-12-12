@@ -1,9 +1,7 @@
 class Account:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Register new account
     *
@@ -16,8 +14,8 @@ class Account:
     * return array
     *      option bool "success"
     '''
-    def add(self, options):
 
+    def add(self, options):
         return self.master.call('account/add', options)
 
     '''
@@ -31,8 +29,8 @@ class Account:
     *          option string "value" Limit messages
     *
     '''
-    def limits(self, options):
 
+    def limits(self, options):
         return self.master.call('account/limits', options)
 
     '''
@@ -49,8 +47,8 @@ class Account:
     *          option string "telephone"
     *          option string "photo"
     '''
-    def help(self):
 
+    def help(self):
         return self.master.call('account/help', {})
 
     '''
@@ -60,6 +58,6 @@ class Account:
     *      option bool "new" Marking unread message
     *      option string "message"
     '''
-    def messages(self):
 
+    def messages(self):
         return self.master.call('account/messages', {})

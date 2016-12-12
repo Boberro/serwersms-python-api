@@ -1,9 +1,7 @@
 class Error:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Preview error
     *
@@ -13,6 +11,6 @@ class Error:
     *      option string "type"
     *      option string "message"
     '''
-    def view(self, code):
 
+    def view(self, code):
         return self.master.call('error/' + str(code), {})

@@ -1,7 +1,5 @@
 class Group:
-
     def __init__(self, param):
-
         self.master = param
 
     '''
@@ -12,8 +10,8 @@ class Group:
     *      option bool "success"
     *      option int "id"
     '''
-    def add(self, name):
 
+    def add(self, name):
         options = {
             'name': name
         }
@@ -39,8 +37,8 @@ class Group:
     *          option int "count" Number of contacts in the group
     */
     '''
-    def index(self, search, params):
 
+    def index(self, search, params):
         default = {
             'search': search
         }
@@ -59,8 +57,8 @@ class Group:
     *      option string "name"
     *      option int "count" Number of contacts in the group
     '''
-    def view(self, id):
 
+    def view(self, id):
         options = {
             'id': id
         }
@@ -76,8 +74,8 @@ class Group:
     *      option bool "success"
     *      option int "id"
     '''
-    def edit(self, id, name):
 
+    def edit(self, id, name):
         options = {
             'id': id,
             'name': name
@@ -92,8 +90,8 @@ class Group:
     * return array
     *      option bool "success"
     '''
-    def delete(self, id):
 
+    def delete(self, id):
         options = {
             'id': id
         }
@@ -109,8 +107,8 @@ class Group:
     *      option int "group_id"
     *      option string "group_name"
     '''
-    def check(self, phone):
 
+    def check(self, phone):
         options = {
             'phone': phone
         }

@@ -1,7 +1,5 @@
 class Blacklist:
-
     def __init__(self, param):
-
         self.master = param
 
     '''
@@ -12,8 +10,8 @@ class Blacklist:
     *      option bool "success"
     *      option int "id"
     '''
-    def add(self, phone):
 
+    def add(self, phone):
         options = {
             'phone': phone
         }
@@ -35,8 +33,8 @@ class Blacklist:
     *          option string "phone"
     *          option string "added" Date of adding phone
     '''
-    def index(self, phone, params):
 
+    def index(self, phone, params):
         default = {
             'phone': phone
         }
@@ -53,8 +51,8 @@ class Blacklist:
     * return array
     *      option bool "exists"
     '''
-    def check(self, phone):
 
+    def check(self, phone):
         options = {
             'phone': phone
         }
@@ -68,8 +66,8 @@ class Blacklist:
     * return array
     *      option bool "success"
     '''
-    def delete(self, phone):
 
+    def delete(self, phone):
         options = {
             'phone': phone
         }

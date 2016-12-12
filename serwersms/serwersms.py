@@ -1,5 +1,6 @@
 import json
 import requests
+
 try:
     from urllib2 import Request, urlopen, URLError
     from urllib import urlencode
@@ -22,20 +23,20 @@ from .stat import Stat
 from .premium import Premium
 from .error import Error
 
-class SerwerSMS:
 
+class SerwerSMS:
     def __init__(self, username=None, password=None):
-    
+
         self.username = username
 
         self.password = password
-        
+
         self.api_url = 'https://api2.serwersms.pl/'
-        
+
         self.format = 'json'
-		
+
         self.client = 'client_python'
-        
+
         self.test = ''
 
         self.message = Message(self)
@@ -67,18 +68,16 @@ class SerwerSMS:
         self.error = Error(self)
 
     def call(self, action, params):
-        
+
         url = self.api_url + action + "." + self.format
 
-        
         tmp = {
             'username': self.username,
             'password': self.password,
             'system': self.client
         }
-        
-        params.update(tmp)
 
+        params.update(tmp)
 
         headers = {
             'Content-type': 'application/json'
@@ -88,7 +87,7 @@ class SerwerSMS:
 
         req = requests.post(url, data=data, headers=headers)
 
-        if(action == 'payments/invoice'):
+        if action == 'payments/invoice':
             return req.content
         else:
             return req.text

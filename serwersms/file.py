@@ -1,9 +1,7 @@
 class File:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Add new file
     *
@@ -15,8 +13,8 @@ class File:
     *      option bool "success"
     *      option string "id"
     '''
-    def add(self, type, params):
 
+    def add(self, type, params):
         default = {
             'type': type
         }
@@ -38,8 +36,8 @@ class File:
     *          option string "type" - mms|voice
     *          option string "date"
     '''
-    def index(self, type):
 
+    def index(self, type):
         options = {
             'type': type
         }
@@ -58,8 +56,8 @@ class File:
     *      option string "type" - mms|voice
     *      option string "date"
     '''
-    def view(self, id, type):
 
+    def view(self, id, type):
         options = {
             'id': id,
             'type': type
@@ -75,8 +73,8 @@ class File:
     * return array
     *      option bool "success"
     '''
-    def delete(self, id, type):
 
+    def delete(self, id, type):
         options = {
             'id': id,
             'type': type

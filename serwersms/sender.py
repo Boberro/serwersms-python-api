@@ -1,9 +1,7 @@
 class Sender:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Creating new Sender name
     *
@@ -11,8 +9,8 @@ class Sender:
     * return array
     *      option bool "success"
     '''
-    def add(self, name):
 
+    def add(self, name):
         options = {
             'name': name
         }
@@ -32,6 +30,6 @@ class Sender:
     *          option string "agreement" delivered|required|not_required
     *          option string "status" pending_authorization|authorized|rejected|deactivated
     '''
-    def index(self, options):
 
+    def index(self, options):
         return self.master.call('senders/index', options)

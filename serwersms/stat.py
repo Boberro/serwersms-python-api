@@ -1,9 +1,7 @@
 class Stat:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Statistics an sending
     *
@@ -24,6 +22,6 @@ class Stat:
     *          option string "text"
     *          option string "type" eco|full|voice|mms
     '''
-    def index(self, options):
 
+    def index(self, options):
         return self.master.call('stats/index', options)

@@ -1,9 +1,7 @@
 class Premium:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
      * List of received SMS Premium
      *
@@ -16,8 +14,8 @@ class Premium:
      *          option int "limit" Limitation the number of responses
      *          option string "text" Message
     '''
-    def index(self):
 
+    def index(self):
         return self.master.call('premium/index', {})
 
     '''
@@ -30,8 +28,8 @@ class Premium:
     * return array
     *      option bool "success"
     '''
-    def send(self, phone, text, gate, id):
 
+    def send(self, phone, text, gate, id):
         options = {
             'phone': phone,
             'text': text,
@@ -52,8 +50,8 @@ class Premium:
     *          option int "id"
     *          option int "count" Number of response
     '''
-    def quiz(self, id):
 
+    def quiz(self, id):
         options = {
             'id': id
         }

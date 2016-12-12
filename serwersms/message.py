@@ -1,9 +1,7 @@
 class Message:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Sending messages
     *
@@ -36,8 +34,8 @@ class Message:
     *          option string "error_message"
     *          option string "text"
     '''
-    def send_sms(self, phone, text, sender, params):
 
+    def send_sms(self, phone, text, sender, params):
         default = {
             'phone': phone,
             'text': text,
@@ -81,8 +79,8 @@ class Message:
     *          option string "error_message"
     *          option string "text"
     '''
-    def send_personalized(self, messages, sender, params):
 
+    def send_personalized(self, messages, sender, params):
         param = ''
         for message in messages:
             param += message['phone']
@@ -125,8 +123,8 @@ class Message:
     *          option string "error_message"
     *          option string "text"
     '''
-    def send_voice(self, phone, params):
 
+    def send_voice(self, phone, params):
         default = {
             'phone': phone
         }
@@ -161,8 +159,8 @@ class Message:
     *          option string "error_message"
     *          option string "text"
     '''
-    def send_mms(self, phone, title, params):
 
+    def send_mms(self, phone, title, params):
         default = {
             'phone': phone,
             'title': title
@@ -222,8 +220,8 @@ class Message:
     *          option string "address"
     *          option string "description"
     '''
-    def view(self, id, params):
 
+    def view(self, id, params):
         default = {
             'id': id
         }
@@ -306,8 +304,8 @@ class Message:
     *              option string "address"
     *              option string "description"
     '''
-    def reports(self, params):
 
+    def reports(self, params):
         return self.master.call('messages/reports', params)
 
     '''
@@ -318,8 +316,8 @@ class Message:
     * return array
     *      option bool "success"
     '''
-    def delete(self, id, unique_id):
 
+    def delete(self, id, unique_id):
         options = {
             'id': id,
             'unique_id': unique_id
@@ -374,8 +372,8 @@ class Message:
     *              option string "address"
     *              option string "description"
     '''
-    def recived(self, type, params):
 
+    def recived(self, type, params):
         default = {
             'type': type
         }
@@ -393,8 +391,8 @@ class Message:
     * return array
     *      option bool "success"
     '''
-    def send_nd(self, phone, text):
 
+    def send_nd(self, phone, text):
         options = {
             'phone': phone,
             'text': text
@@ -411,8 +409,8 @@ class Message:
     * return array
     *      option bool "success"
     '''
-    def send_ndi(self, phone, text, ndi_number):
 
+    def send_ndi(self, phone, text, ndi_number):
         options = {
             'phone': phone,
             'text': text,

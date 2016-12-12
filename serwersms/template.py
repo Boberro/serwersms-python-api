@@ -1,9 +1,7 @@
 class Template:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * List of templates
     * param array params
@@ -15,8 +13,8 @@ class Template:
     *          option string "name"
     *          option string "text"
     '''
-    def index(self, options):
 
+    def index(self, options):
         return self.master.call('templates/index', options)
 
     '''
@@ -29,8 +27,8 @@ class Template:
     *          option bool "success"
     *          option int "id"
     '''
-    def add(self, name, text):
 
+    def add(self, name, text):
         options = {
             'name': name,
             'text': text
@@ -48,8 +46,8 @@ class Template:
     *      option bool "success"
     *      option int "id"
     '''
-    def edit(self, id, name, text):
 
+    def edit(self, id, name, text):
         options = {
             'id': id,
             'name': name,
@@ -58,7 +56,6 @@ class Template:
 
         return self.master.call('templates/edit', options)
 
-
     '''
     * Deleting a template
     *
@@ -66,8 +63,8 @@ class Template:
     * return array
     *      option bool "success"
     '''
-    def delete(self, id):
 
+    def delete(self, id):
         options = {
             'id': id
         }

@@ -1,9 +1,7 @@
 class Phone:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Checking phone in to HLR
     *
@@ -17,8 +15,8 @@ class Phone:
     *      option bool "ported"
     *      option string "network_ported"
     '''
-    def check(self, phone, id):
 
+    def check(self, phone, id):
         options = {
             'phone': phone,
             'id': id
@@ -33,8 +31,8 @@ class Phone:
     * return array
     *      option bool "correct"
     '''
-    def test(self, phone):
 
+    def test(self, phone):
         options = {
             'phone': phone
         }

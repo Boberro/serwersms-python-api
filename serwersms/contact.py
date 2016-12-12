@@ -1,7 +1,5 @@
 class Contact:
-
     def __init__(self, param):
-
         self.master = param
 
     '''
@@ -22,8 +20,8 @@ class Contact:
     *      option bool "success"
     *      option int "id"
     '''
-    def add(self, group_id, phone, params):
 
+    def add(self, group_id, phone, params):
         default = {
             'group_id': group_id,
             'phone': phone
@@ -63,8 +61,8 @@ class Contact:
     *          option int "group_id"
     *          option string "group_name"
     '''
-    def index(self, group_id, search, params):
 
+    def index(self, group_id, search, params):
         default = {
             'group_id': group_id,
             'search': search
@@ -92,8 +90,8 @@ class Contact:
     *      option string "description"
     *      option bool "blacklist"
     '''
-    def view(self, id):
 
+    def view(self, id):
         options = {
             'id': id
         }
@@ -119,8 +117,8 @@ class Contact:
     *      option bool "success"
     *      option int "id"
     '''
-    def edit(self, id, group_id, phone, params):
 
+    def edit(self, id, group_id, phone, params):
         default = {
             'id': id,
             'group_id': group_id,
@@ -139,8 +137,8 @@ class Contact:
     * return array
     *      option bool "success"
     '''
-    def delete(self, id):
 
+    def delete(self, id):
         options = {
             'id': id
         }
@@ -163,8 +161,8 @@ class Contact:
     *      option int "correct" Number of contacts imported correctly
     *      option int "failed" Number of errors
     '''
-    def imports(self, group_name, contacts):
 
+    def imports(self, group_name, contacts):
         options = {
             'group_name': group_name,
             'contact': contacts

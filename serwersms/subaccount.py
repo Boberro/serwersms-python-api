@@ -1,9 +1,7 @@
 class Subaccount:
-    
     def __init__(self, param):
-        
         self.master = param
-    
+
     '''
     * Creating new subaccount
     *
@@ -16,8 +14,8 @@ class Subaccount:
     *      option string "email"
     * return type
     '''
-    def add(self, subaccount_username, subaccount_password, subaccount_id, params):
 
+    def add(self, subaccount_username, subaccount_password, subaccount_id, params):
         default = {
             'subaccount_username': subaccount_username,
             'subaccount_password': subaccount_password,
@@ -37,8 +35,8 @@ class Subaccount:
     *          option int "id"
     *          option string "username"
     '''
-    def index(self):
 
+    def index(self):
         return self.master.call('subaccounts/index', {})
 
     '''
@@ -52,8 +50,8 @@ class Subaccount:
     *      option string "phone"
     *      option string "email"
     '''
-    def view(self, id):
 
+    def view(self, id):
         options = {
             'id': id
         }
@@ -70,8 +68,8 @@ class Subaccount:
     *      option bool "success"
     *      option int "id"
     '''
-    def limit(self, id, type, value):
 
+    def limit(self, id, type, value):
         options = {
             'id': id,
             'type': type,
@@ -87,8 +85,8 @@ class Subaccount:
      * return array
      *      option bool "success"
      '''
-    def delete(self, id):
 
+    def delete(self, id):
         options = {
             'id': id
         }
